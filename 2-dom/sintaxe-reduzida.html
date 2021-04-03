@@ -1,0 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{ contador }}</p>
+    <!--v-on:click pode se usar só @click-->
+    <button @click="somar">Somar 1</button>
+    <hr>
+    <!--v-bind:value pode se usar só :value-->
+    <input type="text" :value="contador">
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            contador:'0'
+        },
+        methods:{
+            somar(){
+                this.contador++
+            }
+        }
+    })
+</script>
